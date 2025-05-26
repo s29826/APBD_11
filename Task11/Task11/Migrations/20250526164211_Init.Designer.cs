@@ -12,8 +12,8 @@ using Task11.Data;
 namespace Task11.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20250526155553_Init2")]
-    partial class Init2
+    [Migration("20250526164211_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -118,7 +118,7 @@ namespace Task11.Migrations
                     b.Property<DateOnly>("Date")
                         .HasColumnType("date");
 
-                    b.Property<DateOnly>("DateDue")
+                    b.Property<DateOnly>("DueDate")
                         .HasColumnType("date");
 
                     b.Property<int>("IdDoctor")

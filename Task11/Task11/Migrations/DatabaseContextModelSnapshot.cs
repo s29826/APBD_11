@@ -48,6 +48,22 @@ namespace Task11.Migrations
                     b.HasKey("IdDoctor");
 
                     b.ToTable("Doctors");
+
+                    b.HasData(
+                        new
+                        {
+                            IdDoctor = 1,
+                            Email = "123@gmail.com",
+                            FirstName = "Johnny",
+                            LastName = "Johns"
+                        },
+                        new
+                        {
+                            IdDoctor = 2,
+                            Email = "321@gmail.com",
+                            FirstName = "Adam",
+                            LastName = "Apple"
+                        });
                 });
 
             modelBuilder.Entity("Task11.Models.Medicament", b =>
@@ -76,6 +92,22 @@ namespace Task11.Migrations
                     b.HasKey("IdMedicament");
 
                     b.ToTable("Medicaments");
+
+                    b.HasData(
+                        new
+                        {
+                            IdMedicament = 1,
+                            Description = "Strong",
+                            Name = "Apap",
+                            Type = "Pill"
+                        },
+                        new
+                        {
+                            IdMedicament = 2,
+                            Description = "Strong",
+                            Name = "Ibuprom",
+                            Type = "Pill"
+                        });
                 });
 
             modelBuilder.Entity("Task11.Models.Patient", b =>
@@ -115,7 +147,7 @@ namespace Task11.Migrations
                     b.Property<DateOnly>("Date")
                         .HasColumnType("date");
 
-                    b.Property<DateOnly>("DateDue")
+                    b.Property<DateOnly>("DueDate")
                         .HasColumnType("date");
 
                     b.Property<int>("IdDoctor")

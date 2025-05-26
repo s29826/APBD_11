@@ -63,7 +63,7 @@ namespace Task11.Migrations
                     IdPrescritption = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Date = table.Column<DateOnly>(type: "date", nullable: false),
-                    DateDue = table.Column<DateOnly>(type: "date", nullable: false),
+                    DueDate = table.Column<DateOnly>(type: "date", nullable: false),
                     IdPatient = table.Column<int>(type: "int", nullable: false),
                     IdDoctor = table.Column<int>(type: "int", nullable: false)
                 },
